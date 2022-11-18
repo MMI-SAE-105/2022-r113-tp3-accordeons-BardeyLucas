@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{isOpen : 0}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,5 +8,19 @@
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    <div class="accordeon">
+      <section>
+        <button @click="isOpen = 1">bouton 1</button>
+        <p x-show="isOpen === 1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab sequi autem explicabo dolores nemo amet eligendi quae odio expedita? Et enim velit quidem beatae quo voluptatem nam porro. Libero?</p>
+      </section>
+      <section>
+        <button @click="isOpen = 2">bouton 2</button>
+        <p x-show="isOpen === 2">Voluptatum quibusdam, consequuntur tempore ipsum quia harum. Nostrum autem nobis eaque iste optio velit, aperiam, quo, amet nulla facilis in eum atque tempora cum quod animi? Dicta asperiores corporis autem.</p>
+      </section>
+      <section>
+        <button @click="isOpen = 3">bouton 3</button>
+        <p x-show="isOpen === 3">Exercitationem laboriosam voluptate fuga, velit itaque fugit laborum nulla illum tempora. Id illum sint inventore qui rem autem, ducimus maiores quam sed magnam placeat veritatis dicta expedita et ad consequatur.</p>
+      </section>
+    </div>
   </body>
 </html>

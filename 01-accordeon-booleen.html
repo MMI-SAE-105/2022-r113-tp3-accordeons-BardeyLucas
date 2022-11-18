@@ -9,18 +9,18 @@
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
-    <div class="accordeon" x-data="{isOpen:1}">
-      <section>
-        <button @click="isOpen =1">bouton 1</button>
-        <p x-show="isOpen ===1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum praesentium dolorem et ea pariatur dolorum, ab placeat commodi nemo cum voluptates. Ipsam animi dolore blanditiis ipsum pariatur et! Eos, doloribus.</p>
+    <div class="accordeon">
+      <section x-data="{isOpen1:false}">
+        <button @click="isOpen1 =! isOpen1">bouton 1</button>
+        <p x-show="isOpen1 === true" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum praesentium dolorem et ea pariatur dolorum, ab placeat commodi nemo cum voluptates. Ipsam animi dolore blanditiis ipsum pariatur et! Eos, doloribus.</p>
       </section>
-      <section>
-        <button @click="isOpen =2">bouton 2</button>
-        <p x-show="isOpen ===2" x-collapse.duration.10000ms.min.50px style="height:50px;overflow:hidden;">Asperiores, magni molestias corporis nihil aliquam quo nam assumenda, consequatur, esse quod dignissimos. Odio minima fuga explicabo quas rem deleniti voluptatem provident consectetur quo voluptates, similique nemo officia amet ipsa.</p>
+      <section x-data="{isOpen2:false}">
+        <button @click="isOpen2 =! isOpen2">bouton 2</button>
+        <p x-show="isOpen2 === true" >Asperiores, magni molestias corporis nihil aliquam quo nam assumenda, consequatur, esse quod dignissimos. Odio minima fuga explicabo quas rem deleniti voluptatem provident consectetur quo voluptates, similique nemo officia amet ipsa.</p>
       </section>
-      <section>
-        <button @click="isOpen =3">bouton 3</button>
-        <p x-show="isOpen ===3" >Explicabo cupiditate dolore sapiente nemo ab totam nam officia quis itaque! Laudantium corrupti, similique provident dolorem aliquam animi vitae accusantium itaque, necessitatibus dicta consequuntur inventore sequi praesentium? Expedita, ducimus sapiente?</p>
+      <section x-data="{isOpen3:false}">
+        <button @click="isOpen3 =! isOpen3">bouton 3</button>
+        <p x-show="isOpen3 === true" >Explicabo cupiditate dolore sapiente nemo ab totam nam officia quis itaque! Laudantium corrupti, similique provident dolorem aliquam animi vitae accusantium itaque, necessitatibus dicta consequuntur inventore sequi praesentium? Expedita, ducimus sapiente?</p>
       </section>
     </div>
   </body>
