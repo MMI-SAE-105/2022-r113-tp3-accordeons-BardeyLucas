@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{isOpen : 0}">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
-    <div class="accordeon">
+    <div class="accordeon" x-data="{IsOpen : 0}">
       <section>
-        <button @click="isOpen = 1">bouton 1</button>
-        <p x-show="isOpen === 1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab sequi autem explicabo dolores nemo amet eligendi quae odio expedita? Et enim velit quidem beatae quo voluptatem nam porro. Libero?</p>
+        <button @click="IsOpen = 1">bouton 1</button>
+        <p x-show="IsOpen === 1" x-transition:enter.scale.origine.top>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ab sequi autem explicabo dolores nemo amet eligendi quae odio expedita? Et enim velit quidem beatae quo voluptatem nam porro. Libero?</p>
       </section>
       <section>
-        <button @click="isOpen = 2">bouton 2</button>
-        <p x-show="isOpen === 2">Voluptatum quibusdam, consequuntur tempore ipsum quia harum. Nostrum autem nobis eaque iste optio velit, aperiam, quo, amet nulla facilis in eum atque tempora cum quod animi? Dicta asperiores corporis autem.</p>
+        <button @click="IsOpen = 2">bouton 2</button>
+        <p x-show="IsOpen === 2" x-transition:enter.scale.origine.top>Voluptatum quibusdam, consequuntur tempore ipsum quia harum. Nostrum autem nobis eaque iste optio velit, aperiam, quo, amet nulla facilis in eum atque tempora cum quod animi? Dicta asperiores corporis autem.</p>
       </section>
       <section>
-        <button @click="isOpen = 3">bouton 3</button>
-        <p x-show="isOpen === 3">Exercitationem laboriosam voluptate fuga, velit itaque fugit laborum nulla illum tempora. Id illum sint inventore qui rem autem, ducimus maiores quam sed magnam placeat veritatis dicta expedita et ad consequatur.</p>
+        <button @click="IsOpen = 3">bouton 3</button>
+        <p x-show="IsOpen === 3" x-transition:enter.scale.origine.top>Exercitationem laboriosam voluptate fuga, velit itaque fugit laborum nulla illum tempora. Id illum sint inventore qui rem autem, ducimus maiores quam sed magnam placeat veritatis dicta expedita et ad consequatur.</p>
       </section>
     </div>
   </body>

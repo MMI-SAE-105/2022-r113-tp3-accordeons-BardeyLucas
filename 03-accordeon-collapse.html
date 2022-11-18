@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
   </head>
   <body>
-    <h1>Accordéon avec <code>x-collapse</code></h1>
+    <h1>Accordéon avec des booléens</h1>
     <div class="accordeon">
-      <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim quam velit, minus corporis suscipit pariatur ad dolore sed illo cupiditate repellat quos, porro laborum eum exercitationem mollitia quisquam ex odio.</p>
+      <section x-data="{isOpen1:false}">
+        <button @click="isOpen1 =! isOpen1">bouton 1</button>
+        <p x-show="isOpen1 === true" x-collapse>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum praesentium dolorem et ea pariatur dolorum, ab placeat commodi nemo cum voluptates. Ipsam animi dolore blanditiis ipsum pariatur et! Eos, doloribus.</p>
       </section>
-      <section>
-        <button>bouton 2</button>
-        <p>Ipsa nam, doloremque aperiam deleniti non enim labore veniam, at hic soluta voluptatem totam vel optio reprehenderit cum, repudiandae praesentium distinctio reiciendis accusantium quidem ipsum mollitia eius. Consequatur, ab nobis.</p>
+      <section x-data="{isOpen2:false}">
+        <button @click="isOpen2 =! isOpen2">bouton 2</button>
+        <p x-show="isOpen2 === true" x-collapse>Asperiores, magni molestias corporis nihil aliquam quo nam assumenda, consequatur, esse quod dignissimos. Odio minima fuga explicabo quas rem deleniti voluptatem provident consectetur quo voluptates, similique nemo officia amet ipsa.</p>
       </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Temporibus corporis quam aperiam! Dolor quod sequi id molestiae qui ab quae at fugiat? Consequuntur reiciendis autem doloremque voluptatum sed, veritatis amet enim ab placeat maxime expedita. Enim, laudantium neque.</p>
+      <section x-data="{isOpen3:false}">
+        <button @click="isOpen3 =! isOpen3">bouton 3</button>
+        <p x-show="isOpen3 === true" x-collapse>Explicabo cupiditate dolore sapiente nemo ab totam nam officia quis itaque! Laudantium corrupti, similique provident dolorem aliquam animi vitae accusantium itaque, necessitatibus dicta consequuntur inventore sequi praesentium? Expedita, ducimus sapiente?</p>
       </section>
     </div>
   </body>
