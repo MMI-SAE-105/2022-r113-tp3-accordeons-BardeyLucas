@@ -7,30 +7,42 @@
     <title>Accordéon horizontal</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>
+      #onglet ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+      }
+      #onglet li{
+        padding: 0;
+      }
+      
+    </style>
   </head>
   <body>
-    <ul id="accordeon">
-      <li>
+    <ul id="accordeon" x-data="{ouvert : 1}">
+      <li class='actif' @click="ouvert = 1">
         <figure>
-          <img src="./img/Gyomei_anime.webp" alt="Gyomei" width="102">
+          <img src="./img/Gyomei_anime.webp" width="102" height="77" alt="Gyomei" width="102">
           <figcaption>
             <h3>Lorem, ipsum dolor.</h3>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li class='actif' @click="ouvert = 2">
         <figure>
-          <img src="./img/demon-slayer-gyutaro.jpg" alt="Gyutaro" width="102">
+          <img src="./img/demon-slayer-gyutaro.jpg" width="102" height="77" alt="Gyutaro" width="102">
           <figcaption>
             <h3>Vero, laudantium quae!</h3>
             <p>Ducimus non mollitia beatae debitis voluptate!</p>
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li class='actif' @click="ouvert = 1">
         <figure>
-          <img src="./img/Akaza-demon-Slayer-3.jpg" alt="Akaza" width="102">
+          <img src="./img/Akaza-demon-Slayer-3.jpg" width="102" height="77" alt="Akaza" width="102">
           <figcaption>
             <h3>Vel, mollitia rem!</h3>
             <p>Aliquid harum fugiat facere autem sint.</p>
