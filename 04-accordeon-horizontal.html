@@ -21,8 +21,8 @@
     </style>
   </head>
   <body>
-    <ul id="accordeon" x-data="{ouvert : 1}">
-      <li class='actif' @click="ouvert = 1">
+    <ul id="accordeon">
+      <li class='actif'>
         <figure>
           <img src="./img/Gyomei_anime.webp" width="102" height="77" alt="Gyomei" width="102">
           <figcaption>
@@ -31,7 +31,7 @@
           </figcaption>
         </figure>
       </li>
-      <li class='actif' @click="ouvert = 2">
+      <li class=>
         <figure>
           <img src="./img/demon-slayer-gyutaro.jpg" width="102" height="77" alt="Gyutaro" width="102">
           <figcaption>
@@ -40,7 +40,7 @@
           </figcaption>
         </figure>
       </li>
-      <li class='actif' @click="ouvert = 1">
+      <li class=>
         <figure>
           <img src="./img/Akaza-demon-Slayer-3.jpg" width="102" height="77" alt="Akaza" width="102">
           <figcaption>
@@ -50,5 +50,28 @@
         </figure>
       </li>
     </ul>
+    <script>
+      (function () {
+        "use strict";
+    
+        var listeLI = document.querySelectorAll('#accordeon>li');
+    
+    
+        function basculeClassActif() {
+          for (var i = 0; i < listeLI.length; i++) {
+            var unLi = listeLI[i];
+            unLi.classList.remove('actif');
+          }
+          this.classList.add('actif');
+        }
+    
+        for (var i = 0; i < listeLI.length; i++) {
+          var unLI = listeLI[i];
+          unLI.addEventListener("click", basculeClassActif);
+        }
+    
+      }());
+    
+    </script>
   </body>
 </html>
