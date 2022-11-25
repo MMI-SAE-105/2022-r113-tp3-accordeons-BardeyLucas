@@ -1,3 +1,6 @@
+#back{
+    background-color: rgb(23, 15, 0);
+}
 #accordeon {
     /* pour que les éléments soient alignés horizontalement */
     display: flex;
@@ -19,7 +22,7 @@
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     /* couleur de fond #eee */
-    background-color: #eee;
+    background-color: rgb(195, 126, 0);
     /* pour enlever les puces */
     list-style-type : none;
     /* pour espacer les éléments, marge de 3px */
