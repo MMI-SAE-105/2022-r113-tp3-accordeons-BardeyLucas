@@ -5,14 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onglets</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/acoo5.css" />
     <script defer src="https://unpkg.com/alpinejs"></script>
   </head>
 
   <body>
-<button>About accordeon</button>
-<button>Accordion items</button>
-<button>How to use a JavaScript accordion</button>
+    <h1>Onglets</h1>
+    <div id="onglets" x-data="{ouvert : 1,}">
+    <button @click="ouvert = 1">About accordeon</button>
+    <div x-show="ouvert === 1">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem expedita sed neque, magnam voluptatem cupiditate quasi fugit quod dignissimos! Quibusdam quo atque ad voluptatum ea molestias tenetur explicabo qui!</p>
+    </div>
+    <button @click="ouvert = 2">Accordion items</button>
+    <div x-show="ouvert === 2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem expedita sed neque, magnam voluptatem cupiditate quasi fugit quod dignissimos! Quibusdam quo atque ad voluptatum ea molestias tenetur explicabo qui!</p>
+    </div>
+    <button @click="ouvert = 3">How to use a JavaScript accordion</button>
+    <div x-show="ouvert === 3">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem expedita sed neque, magnam voluptatem cupiditate quasi fugit quod dignissimos! Quibusdam quo atque ad voluptatum ea molestias tenetur explicabo qui!</p>
+    </div>
+
   </body>
 </html>
 

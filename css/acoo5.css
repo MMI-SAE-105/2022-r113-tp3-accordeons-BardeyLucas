@@ -1,0 +1,24 @@
+button{
+    height: 40px;
+    width:500px;
+    background-color:royalblue;
+    color:white;
+    font-size: 20px;
+    text-align: left;
+    border: none;
+    margin-top: 5px;
+}
+button:hover{
+    background-color:blue;
+}
+button:focus{
+    background-color:darkgray;
+    color:dimgrey;
+}
+div>div{
+    width: 500px;
+    margin-top: 5px;
+    border: solid 1px;
+    border-color: black;
+    background-color: white;
+}
